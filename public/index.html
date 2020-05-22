@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li id="term-suggest" class="disabled">Predlog pojmova</li>
+        <li id="hall-button" class="disabled">Hall Of Fame</li>
+        <li id="logout" class="disabled">Logout</li>
+      </ul>
+    </header>
+    <div class="wrapper">
+      <form class="login-form">
+        <p>Morate se ulogovati da bi nastavili</p>
+        <input id="username" type="text" placeholder="Unesi korisničko ime" class="form-input" />
+        <button class="form-submit">Potvrdi</button>
+      </form>
+      <p class="logged-in-message hidden"></p>
+      <form class="terms-form hidden">
+        <p>Molimo unesite pojam</p>
+        <select id="category">
+          <option value="država" selected>Država</option>
+          <option value="grad">Grad</option>
+          <option value="reka">Reka</option>
+          <option value="planina">Planina</option>
+          <option value="biljka">Biljka</option>
+          <option value="životinja">Životinja</option>
+          <option value="predmet">Predmet</option>
+        </select>
+        <input id="term" type="text" placeholder="Molimo unesite pojam" class="form-input" />
+        <button class="form-submit">Potvrdi</button>
+      </form>
+      <div class="hall-of-fame hidden">
+        <h2>High scores</h2>
+        <ul></ul>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

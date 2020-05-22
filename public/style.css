@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-image: url("images/img1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+header ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+header ul li {
+  padding: 20px 20px;
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+}
+header li:hover {
+  background-color: rgba(249, 240, 227, 0.5);
+}
+.wrapper {
+  padding: 30px 20px;
+}
+.wrapper:focus-within{
+  background-color: rgba(249, 240, 227, 0.2);
+}
+.login-form,
+.terms-form,
+.hall-of-fame-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+}
+.logged-in-message {
+  color: white;
+  font-size: 35px;
+}
+.terms-form select {
+  margin: 10px;
+  width: 150px;
+  height: 35px;
+}
+.form-input {
+  width: 400px;
+  height: 40px;
+}
+.form-submit {
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+}
+.hall-of-fame {
+  color: white;
+  font-size: 25px;
+}
+.hall-of-fame ul{
+  list-style-type: none;
+}
+.hall-of-fame ul li {
+  margin: 10px;
+}
+.hidden {
+  display: none;
+}
+.disabled {
+  color: lightgray;
+  cursor: default;
+}
