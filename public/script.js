@@ -83,7 +83,6 @@ let pcPoints = 0;
 if (loggedInUser) {
   loginForm.classList.add("hidden");
   termSuggest.classList.remove("disabled");
-  hallButton.classList.remove("disabled");
   vsPc.classList.remove("disabled");
   logout.classList.remove("disabled");
   loggedInMessage.classList.remove("hidden");
@@ -99,7 +98,6 @@ loginForm.addEventListener("submit", (event) => {
   loggedInMessage.classList.remove("hidden");
   loggedInMessage.textContent = `Welcome ${loggedInUser}!`;
   termSuggest.classList.remove("disabled");
-  hallButton.classList.remove("disabled");
   vsPc.classList.remove("disabled");
   logout.classList.remove("disabled");
 });
@@ -130,7 +128,7 @@ termSuggest.addEventListener("click", () => {
 });
 
 hallButton.addEventListener("click", () => {
-  if (loggedInUser) {
+  if (false) {
 
     hallOfFameList.innerHTML = "";
 
