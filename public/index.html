@@ -10,21 +10,22 @@
   <body>
     <header>
       <ul>
-        <li id="term-suggest" class="disabled">Predlog pojmova</li>
-        <li id="hall-button" class="disabled">Hall Of Fame</li>
-        <li id="logout" class="disabled">Logout</li>
+        <li class="term-suggest disabled">Predlog Pojmova</li>
+        <li class="hall-button disabled">Hall Of Fame</li>
+        <li class="vs-pc disabled">Igra Protiv Kompjutera</li>
+        <li class="logout disabled">Logout</li>
       </ul>
     </header>
     <div class="wrapper">
       <form class="login-form">
         <p>Morate se ulogovati da bi nastavili</p>
-        <input id="username" type="text" placeholder="Unesi korisničko ime" class="form-input" />
+        <input type="text" placeholder="Unesi korisničko ime" class="username form-input" />
         <button class="form-submit">Potvrdi</button>
       </form>
       <p class="logged-in-message hidden"></p>
       <form class="terms-form hidden">
         <p>Molimo unesite pojam</p>
-        <select id="category">
+        <select class="category">
           <option value="država" selected>Država</option>
           <option value="grad">Grad</option>
           <option value="reka">Reka</option>
@@ -33,13 +34,106 @@
           <option value="životinja">Životinja</option>
           <option value="predmet">Predmet</option>
         </select>
-        <input id="term" type="text" placeholder="Molimo unesite pojam" class="form-input" />
+        <input type="text" placeholder="Molimo unesite pojam" class="term form-input" />
         <button class="form-submit">Potvrdi</button>
       </form>
       <div class="hall-of-fame hidden">
         <h2>High scores</h2>
         <ul></ul>
       </div>
+      <form class="vs-pc-form hidden">
+        <button class="vs-pc-start form-submit">Start</button>
+        <div class="vs-pc-game hidden">
+          <p>Preostalo vreme: <span class="timer-time">90</span></p>
+          <p>Pocetno slovo je: <span class="first-letter"></span></p>
+          <div>
+            <div class="user-drzava">
+              <label for="user-drzava-input">Država</label>
+              <input id="user-drzava-input" type="text">
+              <span class="points"></span>
+            </div>
+            <div class="pc-drzava hidden">
+              <label>Država</label>
+              <span id="pc-drzava-input"></span>
+              <span class="points"></span>
+            </div>
+          </div>
+          <div>
+            <div class="user-grad">
+              <label for="user-grad-input">Grad</label>
+              <input id="user-grad-input" type="text">
+              <span class="points"></span>
+            </div>
+            <div class="pc-grad hidden">
+              <label>Grad</label>
+              <span id="pc-grad-input"></span>
+              <span class="points"></span>
+            </div>
+          </div>
+          <div>
+            <div class="user-reka">
+              <label for="user-reka-input">Reka</label>
+              <input id="user-reka-input" type="text">
+              <span class="points"></span>
+            </div>
+            <div class="pc-reka hidden">
+              <label>Reka</label>
+              <span id="pc-reka-input"></span>
+              <span class="points"></span>
+            </div>
+          </div>
+          <div>
+            <div class="user-planina">
+              <label for="user-planina-input">Planina</label>
+              <input id="user-planina-input" type="text">
+              <span class="points"></span>
+            </div>
+            <div class="pc-planina hidden">
+              <label>Planina</label>
+              <span id="pc-planina-input"></span>
+              <span class="points"></span>
+            </div>
+          </div>
+          <div>
+            <div class="user-biljka">
+              <label>Biljka</label>
+              <input id="user-biljka-input" type="text">
+              <span class="points"></span>
+            </div>
+            <div class="pc-biljka hidden">
+              <label for="pc-biljka-input">Biljka</label>
+              <span id="pc-biljka-input"></span>
+              <span class="points"></span>
+            </div>
+          </div>
+          <div>
+            <div class="user-zivotinja">
+              <label>Životinja</label>
+              <input id="user-zivotinja-input" type="text">
+              <span class="points"></span>
+            </div>
+            <div class="pc-zivotinja hidden">
+              <label for="pc-zivotinja-input">Životinja</label>
+              <span id="pc-zivotinja-input"></span>
+              <span class="points"></span>
+            </div>
+          </div>
+          <div>
+            <div class="user-predmet">
+              <label>Predmet</label>
+              <input id="user-predmet-input" type="text">
+              <span class="points"></span>
+            </div>
+            <div class="pc-predmet hidden">
+              <label for="pc-predmet-input">Predmet</label>
+              <span id="pc-predmet-input"></span>
+              <span class="points"></span>
+            </div>
+          </div>
+          <button class="vs-pc-submit form-submit">Potvrdi</button>
+          <button class="vs-pc-repeat form-submit hidden">Započni opet</button>
+        </div>
+      </form>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>

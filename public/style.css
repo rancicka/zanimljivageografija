@@ -5,6 +5,7 @@ body {
   align-items: center;
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
+  text-shadow: black 1px 1px;
   background-image: url("images/img1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,7 +15,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   background-color: transparent;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -38,11 +39,12 @@ header li:hover {
   padding: 30px 20px;
 }
 .wrapper:focus-within{
-  background-color: rgba(249, 240, 227, 0.2);
+  background-color: rgba(249, 240, 227, 0.3);
 }
 .login-form,
 .terms-form,
-.hall-of-fame-form {
+.hall-of-fame-form,
+.vs-pc-form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -78,8 +80,44 @@ header li:hover {
 .hall-of-fame ul li {
   margin: 10px;
 }
+.vs-pc-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vs-pc-game > div {
+  display: flex;
+  width: 100%;
+}
+.vs-pc-game div:first-child {
+  margin-right: 10px;
+}
+.vs-pc-game > div > div {
+  display: flex;
+  flex-direction: column;
+}
+.vs-pc-game p {
+  margin: 0;
+}
+.vs-pc-game .timer {
+  margin-bottom: 10px;
+}
+.vs-pc-game label {
+  margin-top: 10px;
+  font-size: 16px;
+}
+.vs-pc-game input {
+  width: 200px;
+  height: 20px;
+}
+.vs-pc-game .points {
+  font-size: 20px;
+}
+.vs-pc-submit {
+  margin: 20px auto 0;
+}
 .hidden {
-  display: none;
+  display: none !important;
 }
 .disabled {
   color: lightgray;
